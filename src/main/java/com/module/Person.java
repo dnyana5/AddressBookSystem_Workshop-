@@ -1,6 +1,9 @@
 package com.module;
 
+import java.util.Scanner;
+
 public class Person {
+    int id;
     String firstname;
     String lastname;
     String address;
@@ -9,6 +12,28 @@ public class Person {
     int zip;
     String phone;
     String email;
+    Scanner scanner = new Scanner(System.in);
+
+     public Person() {
+         System.out.print("Enter index number:");
+         setId(scanner.nextInt());
+         System.out.print("Enter First name:");
+         setFirstname(scanner.next());
+         System.out.print("Enter last name:");
+         setLastname(scanner.next());
+         System.out.print("Enter your address:");
+         setAddress(scanner.next());
+         System.out.print("Enter your city:");
+         setCity(scanner.next());
+         System.out.print("Enter your state:");
+         setState(scanner.next());
+         System.out.print("Enter your ZIP code:");
+         setZip(scanner.nextInt());
+         System.out.print("Enter your phone number:");
+         setPhone(scanner.next());
+         System.out.print("Enter your email:");
+         setEmail(scanner.next());
+     }
     public String getFirstname() {
         return firstname;
     }
@@ -59,5 +84,13 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 }

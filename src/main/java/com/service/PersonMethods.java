@@ -11,25 +11,21 @@ public class PersonMethods {
 
     public void add() {
 
-            Person person = new Person();
-            book.add(person);
+        Person person = new Person();
+        book.add(person);
     }
+
     public void edit() {
-        Scanner scanner= new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the name whose details need to change  ");
         String name = scanner.nextLine();
         System.out.println("Enter the detail you have to edit");
         while (true) {
-            System.out.println("Press 1 : Address");
-            System.out.println("Press 2 : City");
-            System.out.println("Press 3 : State");
-            System.out.println("Press 4 : Zip");
-            System.out.println("Press 5 : Phone Number");
-            System.out.println("Press 0 : Exit");
+            System.out.println("Press 1 : Address\n\"Press 2 : City\nPress 3 : State\nPress 4 : Zip\nPress 5 : Phone Number\nPress 0 : Exit\"");
             int choice = scanner.nextInt();
             switch (choice) {
                 case 1:
-                    System.out.println("Enter the new Address Name");
+                    System.out.println("Enter the new Address");
                     String address = scanner.next();
                     for (int i = 0; i < book.size(); i++) {
                         if (book.get(i).getFirstname().equalsIgnoreCase(name)) {
@@ -85,18 +81,30 @@ public class PersonMethods {
             }
         }
     }
+
     public void show() {
-            Iterator itr = book.iterator();
-            while (itr.hasNext()) {
-                Person person = (Person) itr.next();
-                System.out.println("Index Number-"+person.getId());
-                System.out.println("Name- " + person.getFirstname()+ " " +person.getLastname());
-                System.out.println("Address- " + person.getAddress());
-                System.out.println("City- " + person.getCity());
-                System.out.println("State- " + person.getState());
-                System.out.println("Zip- " + person.getZip());
-                System.out.println("Phone Number- " + person.getPhone());
-                System.out.println("Email - " + person.getEmail());
+        Iterator itr = book.iterator();
+        while (itr.hasNext()) {
+            Person person = (Person) itr.next();
+            System.out.println("************************");
+            System.out.println("Name- " + person.getFirstname() + " " + person.getLastname()+
+                                "\nAddress- " + person.getAddress() + "\nCity- " + person.getCity() +
+                                "\nState- " + person.getState() + "\nZip- " + person.getZip() +
+                                "\nPhone Number- " + person.getPhone() + "\nEmail - " + person.getEmail());
+        }
+    }
+
+    public void delete() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the  name whose details need to delete from address book");
+        String name = scanner.nextLine();
+        for (int i = 0; i < book.size(); i++) {
+            if (book.get(i).getFirstname().equalsIgnoreCase(name) ||
+                    book.get(i).getLastname().equalsIgnoreCase(name)) {
+                Person person = book.get(i);
+                book.remove(person);
             }
         }
+        System.out.println("contact deleted!!");
+    }
 }

@@ -3,7 +3,6 @@ package com.module;
 import java.util.Scanner;
 
 public class Person {
-    int id;
     String firstname;
     String lastname;
     String address;
@@ -15,8 +14,6 @@ public class Person {
     Scanner scanner = new Scanner(System.in);
 
      public Person() {
-         System.out.print("Enter index number:");
-         setId(scanner.nextInt());
          System.out.print("Enter First name:");
          setFirstname(scanner.next());
          System.out.print("Enter last name:");
@@ -84,13 +81,5 @@ public class Person {
 
     public void setEmail(String email) {
         this.email = email;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 }

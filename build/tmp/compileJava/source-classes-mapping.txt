@@ -1,6 +1,6 @@
-com/module/Person.java
- com.module.Person
 com/service/PersonMethods.java
  com.service.PersonMethods
+com/module/Person.java
+ com.module.Person
 com/controller/AddressBookMain.java
  com.controller.AddressBookMain

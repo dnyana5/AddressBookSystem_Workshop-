@@ -1,19 +1,19 @@
-package com.module;
+package addressbook;
 
 import java.util.Scanner;
 
-public class Person {
-    String firstname;
-    String lastname;
-    String address;
-    String city;
-    String state;
-    int zip;
-    String phone;
-    String email;
-    Scanner scanner = new Scanner(System.in);
+public class Person extends PersonMethods {
+   private String firstname;
+   private String lastname;
+   private String address;
+   private String city;
+   private String state;
+   private int zip;
+   private String phone;
+   private String email;
+   private Scanner scanner = new Scanner(System.in);
 
-     public Person() {
+       Person() {
          System.out.print("Enter First name:");
          setFirstname(scanner.next());
          System.out.print("Enter last name:");

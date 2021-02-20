@@ -7,7 +7,6 @@ import java.util.Set;
 
 
 public class PersonMethods {
-    //ArrayList<Person> newBooks = new ArrayList<>();
     Set<Person> newBooks = new LinkedHashSet<Person>();
 
      void add() {
